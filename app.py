@@ -9,7 +9,12 @@ from products import create_product_download
 import requests
 
 import logging
+from azure.monitor.opentelemetry import configure_azure_monitor
+
 logging.basicConfig(level=logging.INFO)
+
+# Configure Azure monitor collection telemetry pipeline
+configure_azure_monitor()
 
 app = Flask(__name__)
 app.config.from_object(Config)
