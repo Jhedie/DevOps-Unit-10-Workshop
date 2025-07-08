@@ -1,0 +1,5 @@
+Pushing manually to webhook
+curl -X POST 'https://$jhedie-order-processing-app:J6JcLeN73sLFGAC4s7TNGcW38GnJcxBiGPYQlYZLbaChCM8JPTzEuwL0L7S1@jhedie-order-processing-app.scm.azurewebsites.net/api/registry/webhook'
+
+docker build --tag jhedieregistry.azurecr.io/unit10/unit-10-order-processing-app --target production .
+docker push jhedieregistry.azurecr.io/unit10/unit-10-order-processing-app
